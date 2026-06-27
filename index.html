@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>YOUNG VITALITY AN BÌNH - Jumping & Dinh Dưỡng Khoa Học</title>
+    <title>YOUNG VITALITY AN BÌNH - Jumping & Dinh Dưỡng Khoa Học Quốc Tế</title>
     <!-- Google Fonts Premium -->
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <!-- Font Awesome Icons -->
@@ -11,12 +11,12 @@
     <style>
         :root {
             --primary: #72f10d;
-            --primary-glow: rgba(114, 241, 13, 0.3);
+            --primary-glow: rgba(114, 241, 13, 0.4);
             --bg-main: #0b0c10;
-            --bg-surface: #1f2833;
-            --bg-card: #12171f;
+            --bg-surface: #12171f;
+            --bg-card: #1f2833;
             --text-main: #ffffff;
-            --text-muted: #95a5a6;
+            --text-muted: #a0aab2;
             --transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
         }
 
@@ -31,77 +31,73 @@
             font-family: 'Plus Jakarta Sans', sans-serif;
             background-color: var(--bg-main);
             color: var(--text-main);
-            line-height: 1.7;
+            line-height: 1.6;
             overflow-x: hidden;
         }
 
-        /* Premium Header Navigation */
+        /* PREMIUM FIXED HEADER */
         header {
-            background-color: rgba(11, 12, 16, 0.85);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
+            background-color: rgba(11, 12, 16, 0.95);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
             position: fixed;
             top: 0;
             width: 100%;
             z-index: 1000;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
         }
 
         .nav-container {
-            max-width: 1300px;
+            max-width: 1200px;
             margin: 0 auto;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 18px 24px;
+            padding: 14px 24px;
         }
 
         .logo-area {
             display: flex;
             align-items: center;
-            gap: 16px;
+            gap: 12px;
+            text-decoration: none;
+            color: #ffffff;
         }
 
         .logo-img {
-            width: 55px;
-            height: 55px;
+            width: 45px;
+            height: 45px;
             object-fit: contain;
-            filter: drop-shadow(0 0 10px var(--primary-glow));
-            transition: var(--transition);
-        }
-
-        .logo-area:hover .logo-img {
-            transform: scale(1.05) rotate(5deg);
+            filter: drop-shadow(0 0 8px var(--primary-glow));
         }
 
         .brand-name {
             font-weight: 800;
-            font-size: 1.3rem;
-            letter-spacing: 1.5px;
+            font-size: 1.15rem;
+            letter-spacing: 0.5px;
             line-height: 1.2;
         }
 
         .brand-name span {
             color: var(--primary);
             display: block;
-            font-size: 0.85rem;
-            font-weight: 600;
+            font-size: 0.8rem;
+            font-weight: 700;
             letter-spacing: 2px;
         }
 
         nav ul {
             display: flex;
             list-style: none;
-            gap: 32px;
+            gap: 24px;
         }
 
         nav ul a {
             color: var(--text-main);
             text-decoration: none;
-            font-weight: 500;
-            font-size: 0.9rem;
+            font-weight: 600;
+            font-size: 0.85rem;
             transition: var(--transition);
-            letter-spacing: 0.5px;
             opacity: 0.85;
         }
 
@@ -111,117 +107,110 @@
         }
 
         .btn-header {
-            background: transparent;
-            color: var(--primary);
-            border: 2px solid var(--primary);
-            padding: 10px 24px;
-            border-radius: 8px;
+            background: var(--primary);
+            color: #000000;
+            padding: 10px 20px;
+            border-radius: 6px;
             font-weight: 700;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             text-decoration: none;
             transition: var(--transition);
+            white-space: nowrap;
+            box-shadow: 0 4px 12px rgba(114, 241, 13, 0.2);
         }
 
         .btn-header:hover {
-            background: var(--primary);
-            color: #000;
-            box-shadow: 0 0 20px var(--primary-glow);
+            transform: translateY(-1px);
+            box-shadow: 0 6px 20px var(--primary-glow);
         }
 
-        /* Hero Modern Section */
+        /* HERO AREA */
         .hero {
-            padding: 200px 24px 140px 24px;
-            background: radial-gradient(circle at 80% 20%, rgba(114, 241, 13, 0.08) 0%, transparent 50%),
-                        radial-gradient(circle at 10% 80%, rgba(31, 40, 51, 0.5) 0%, transparent 50%);
+            padding: 160px 24px 60px 24px;
+            background: radial-gradient(circle at 50% 15%, rgba(114, 241, 13, 0.08) 0%, transparent 60%);
             text-align: center;
-            position: relative;
         }
 
         .hero-content {
-            max-width: 900px;
+            max-width: 850px;
             margin: 0 auto;
-            position: relative;
-            z-index: 2;
+        }
+
+        .slogan {
+            font-size: 1.05rem;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            color: var(--primary);
+            margin-bottom: 20px;
+            font-weight: 700;
         }
 
         .hero h1 {
-            font-size: 4rem;
+            font-size: 3.5rem;
             font-weight: 800;
             margin-bottom: 24px;
-            letter-spacing: -1px;
             line-height: 1.15;
+            letter-spacing: -0.5px;
         }
 
         .hero h1 span {
             color: var(--primary);
-            position: relative;
-            display: inline-block;
-        }
-
-        .slogan {
-            font-size: 1.2rem;
-            text-transform: uppercase;
-            letter-spacing: 6px;
-            color: var(--text-muted);
-            margin-bottom: 32px;
-            font-weight: 600;
         }
 
         .hero p {
-            max-width: 750px;
-            margin: 0 auto 48px auto;
-            font-size: 1.15rem;
+            font-size: 1.1rem;
             color: var(--text-muted);
-            font-weight: 400;
+            margin-bottom: 36px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .btn-primary {
             background: var(--primary);
             color: #000;
-            padding: 16px 40px;
+            padding: 14px 40px;
             border-radius: 8px;
             font-weight: 700;
-            font-size: 1rem;
+            font-size: 0.95rem;
             text-decoration: none;
             box-shadow: 0 8px 24px rgba(114, 241, 13, 0.25);
             transition: var(--transition);
             display: inline-block;
-            margin-bottom: 50px;
+            margin-bottom: 48px;
         }
 
         .btn-primary:hover {
-            transform: translateY(-3px);
+            transform: translateY(-2px);
             box-shadow: 0 12px 32px var(--primary-glow);
         }
 
-        /* Hero Image Layout */
         .hero-image-wrap {
             max-width: 1000px;
             margin: 0 auto;
-            border-radius: 20px;
+            border-radius: 16px;
             overflow: hidden;
-            box-shadow: 0 25px 60px rgba(0,0,0,0.5), 0 0 40px rgba(114, 241, 13, 0.1);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.6);
             border: 1px solid rgba(255,255,255,0.05);
         }
 
         .hero-img-bg {
             width: 100%;
             height: auto;
-            max-height: 650px;
+            max-height: 550px;
             object-fit: cover;
             display: block;
-            transition: var(--transition);
         }
 
-        .hero-image-wrap:hover .hero-img-bg {
-            transform: scale(1.02);
-        }
-
-        /* Section Global Layout */
+        /* BLOCK STYLING */
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 100px 24px;
+            padding: 90px 24px;
+        }
+
+        section[id] {
+            scroll-margin-top: 100px;
         }
 
         .section-tag {
@@ -232,61 +221,59 @@
             letter-spacing: 3px;
             text-align: center;
             display: block;
-            margin-bottom: 12px;
+            margin-bottom: 14px;
         }
 
         .section-title {
             text-align: center;
-            font-size: 2.5rem;
+            font-size: 2.4rem;
             font-weight: 800;
-            margin-bottom: 60px;
+            margin-bottom: 56px;
             letter-spacing: -0.5px;
         }
 
-        /* Grid Luxury Styling */
         .grid-3 {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 32px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 28px;
         }
 
         .card {
-            background-color: var(--bg-card);
-            border: 1px solid rgba(255, 255, 255, 0.03);
-            border-radius: 16px;
-            padding: 48px 32px;
+            background-color: var(--bg-surface);
+            border: 1px solid rgba(255, 255, 255, 0.04);
+            border-radius: 14px;
+            padding: 40px 28px;
             transition: var(--transition);
-            position: relative;
         }
 
         .card:hover {
-            transform: translateY(-8px);
             border-color: rgba(114, 241, 13, 0.2);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
         }
 
         .card-icon {
-            font-size: 2.5rem;
+            font-size: 2.2rem;
             color: var(--primary);
-            margin-bottom: 28px;
+            margin-bottom: 20px;
         }
 
         .card h3 {
-            font-size: 1.4rem;
-            margin-bottom: 16px;
+            font-size: 1.3rem;
+            margin-bottom: 14px;
             font-weight: 700;
         }
 
         .card p {
             color: var(--text-muted);
             font-size: 0.95rem;
+            line-height: 1.5;
         }
 
-        /* Professional Content Block */
         .content-split {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 48px;
             align-items: center;
         }
 
@@ -294,118 +281,149 @@
             font-size: 1.8rem;
             margin-bottom: 20px;
             font-weight: 700;
+            line-height: 1.3;
         }
 
         .content-text p {
             color: var(--text-muted);
+            font-size: 1rem;
             margin-bottom: 20px;
-            font-size: 1.05rem;
         }
 
-        /* Jumping Image Display */
-        .jumping-media-box {
+        .custom-list {
+            list-style: none;
+            margin-top: 24px;
+            background: rgba(255, 255, 255, 0.02);
+            padding: 20px;
+            border-radius: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .custom-list li {
             position: relative;
-            border-radius: 16px;
+            padding-left: 32px;
+            margin-bottom: 16px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #ffffff;
+        }
+
+        .custom-list li:last-child {
+            margin-bottom: 0;
+        }
+
+        .custom-list li i {
+            position: absolute;
+            left: 0;
+            top: 4px;
+            color: var(--primary);
+            font-size: 1.2rem;
+        }
+
+        .jumping-media-box {
+            border-radius: 14px;
             overflow: hidden;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.4);
             border: 1px solid rgba(114, 241, 13, 0.15);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.4);
         }
 
         .jumping-inline-img {
             width: 100%;
             height: auto;
-            min-height: 450px;
-            max-height: 550px;
+            max-height: 480px;
             object-fit: cover;
             display: block;
         }
 
-        /* Info Section (Schedule & Location) */
+        /* BLOCK LIÊN HỆ */
         .info-section {
-            background-color: var(--bg-card);
-            border-top: 1px solid rgba(255, 255, 255, 0.02);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.02);
+            background-color: var(--bg-surface);
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
         }
 
         .info-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 48px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 28px;
         }
 
         .info-block {
             display: flex;
-            gap: 24px;
+            gap: 20px;
+            background: rgba(11, 12, 16, 0.6);
+            padding: 28px;
+            border-radius: 12px;
+            border: 1px solid rgba(114, 241, 13, 0.2);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
         }
 
         .info-icon {
-            font-size: 1.8rem;
-            color: var(--primary);
-            margin-top: 4px;
-        }
-
-        .info-text h3 {
-            font-size: 1.25rem;
-            margin-bottom: 12px;
-            font-weight: 700;
-        }
-
-        .info-text p {
-            color: var(--text-muted);
-            font-size: 1rem;
-        }
-
-        /* Coaches Section */
-        .coaches {
-            display: flex;
-            gap: 32px;
-            justify-content: center;
-            flex-wrap: wrap;
-            margin-top: 20px;
-        }
-
-        .coach-card {
-            background-color: var(--bg-main);
-            border: 1px solid rgba(255, 255, 255, 0.03);
-            border-radius: 12px;
-            padding: 40px;
-            text-align: center;
-            flex: 1;
-            min-width: 280px;
-            max-width: 380px;
-            transition: var(--transition);
-        }
-
-        .coach-card:hover {
-            border-color: rgba(114, 241, 13, 0.15);
-        }
-
-        .coach-avatar {
-            width: 80px;
-            height: 80px;
-            background-color: rgba(114, 241, 13, 0.05);
-            border-radius: 50%;
-            margin: 0 auto 24px auto;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border: 1px solid rgba(114, 241, 13, 0.3);
             font-size: 2rem;
             color: var(--primary);
         }
 
-        .coach-card h3 {
-            font-size: 1.3rem;
-            margin-bottom: 6px;
+        .info-text h3 {
+            font-size: 1.25rem;
+            margin-bottom: 10px;
             font-weight: 700;
+            color: #ffffff !important;
+        }
+
+        .info-text p {
+            color: #ffffff !important;
+            font-size: 1rem;
+            font-weight: 500;
+        }
+
+        /* COACH CARDS */
+        .coaches {
+            display: flex;
+            gap: 24px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 36px;
+        }
+
+        .coach-card {
+            background-color: #0b0c10;
+            border: 2px solid rgba(114, 241, 13, 0.25);
+            border-radius: 14px;
+            padding: 40px 28px;
+            text-align: center;
+            flex: 1;
+            min-width: 290px;
+            max-width: 420px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+        }
+
+        .coach-avatar {
+            width: 75px;
+            height: 75px;
+            background-color: rgba(114, 241, 13, 0.1);
+            border-radius: 50%;
+            margin: 0 auto 20px auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid var(--primary);
+            font-size: 1.8rem;
+            color: var(--primary);
+        }
+
+        .coach-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 8px;
+            font-weight: 800;
+            color: #ffffff !important;
         }
 
         .coach-card p {
-            color: var(--primary);
-            font-size: 0.85rem;
-            font-weight: 600;
+            color: var(--primary) !important;
+            font-size: 0.9rem;
+            font-weight: 700;
             text-transform: uppercase;
-            letter-spacing: 1px;
+            letter-spacing: 1.5px;
             margin-bottom: 24px;
         }
 
@@ -413,30 +431,29 @@
             display: inline-flex;
             align-items: center;
             gap: 10px;
-            background-color: rgba(255, 255, 255, 0.02);
-            color: var(--text-main);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            padding: 10px 24px;
-            border-radius: 6px;
+            background-color: var(--primary);
+            color: #000000 !important;
+            padding: 14px 28px;
+            border-radius: 8px;
             text-decoration: none;
-            font-weight: 600;
-            font-size: 0.95rem;
+            font-weight: 800;
+            font-size: 1rem;
             transition: var(--transition);
+            width: 100%;
+            justify-content: center;
         }
 
         .btn-phone:hover {
-            background-color: var(--primary);
-            color: #000;
-            border-color: var(--primary);
-            box-shadow: 0 4px 12px var(--primary-glow);
+            transform: scale(1.02);
+            box-shadow: 0 0 20px var(--primary-glow);
         }
 
-        /* Social Modern CTA Section */
+        /* SOCIAL NETWORK AREA */
         .social-cta {
             text-align: center;
-            padding: 120px 24px;
-            background: linear-gradient(180deg, var(--bg-main) 0%, #060709 100%);
-            border-top: 1px solid rgba(255, 255, 255, 0.02);
+            padding: 90px 24px;
+            background: #060709;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
         }
 
         .btn-facebook {
@@ -447,33 +464,31 @@
             color: #000000;
             padding: 16px 40px;
             border-radius: 8px;
-            font-size: 1rem;
+            font-size: 1.05rem;
             font-weight: 700;
             text-decoration: none;
             transition: var(--transition);
-            margin-top: 32px;
+            margin-top: 28px;
+            box-shadow: 0 4px 15px rgba(255,255,255,0.1);
         }
 
         .btn-facebook:hover {
-            transform: translateY(-3px);
             background-color: var(--primary);
-            box-shadow: 0 10px 24px var(--primary-glow);
+            color: #000;
+            box-shadow: 0 8px 25px var(--primary-glow);
         }
 
-        /* Highlight Sub-text */
         .sub-network-text {
             color: var(--primary);
             font-weight: 700;
-            font-size: 1.1rem;
-            margin-bottom: 15px;
-            display: block;
-            text-transform: uppercase;
-            letter-spacing: 1px;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 1.05rem;
         }
 
-        /* Footer minimal */
         footer {
-            background-color: #060709;
+            background-color: #030405;
             padding: 40px 24px;
             text-align: center;
             border-top: 1px solid rgba(255, 255, 255, 0.02);
@@ -481,35 +496,64 @@
             font-size: 0.85rem;
         }
 
-        footer p {
-            margin-bottom: 8px;
-        }
-
-        /* Responsive */
-        @media (max-width: 992px) {
-            .content-split {
-                grid-template-columns: 1fr;
-                gap: 40px;
-            }
-        }
+        /* RESPONSIVE MOBILE TỐI ƯU */
         @media (max-width: 768px) {
             .nav-container {
                 flex-direction: column;
-                gap: 20px;
+                gap: 14px;
+                padding: 12px 16px;
             }
+            
             nav ul {
+                gap: 16px;
                 flex-wrap: wrap;
                 justify-content: center;
-                gap: 20px;
             }
+            
+            nav ul a {
+                font-size: 0.85rem;
+            }
+
+            .btn-header {
+                display: none;
+            }
+
+            .hero {
+                padding: 200px 16px 40px 16px;
+            }
+
             .hero h1 {
-                font-size: 2.8rem;
+                font-size: 2.3rem;
             }
-            .container {
-                padding: 60px 24px;
+
+            .slogan {
+                font-size: 0.9rem;
+                letter-spacing: 2px;
+                margin-bottom: 14px;
             }
+
             .section-title {
-                font-size: 2rem;
+                font-size: 1.8rem;
+                margin-bottom: 36px;
+            }
+
+            .content-split {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+
+            .container {
+                padding: 60px 16px;
+            }
+
+            .info-block {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 24px;
+            }
+            
+            .coach-card {
+                max-width: 100%;
             }
         }
     </style>
@@ -519,37 +563,36 @@
     <!-- Header Navigation -->
     <header>
         <div class="nav-container">
-            <div class="logo-area">
+            <a href="#" class="logo-area">
                 <img src="logo.png" alt="Logo Young Vitality An Bình" class="logo-img">
                 <div class="brand-name">
                     YOUNG VITALITY
                     <span>AN BÌNH</span>
                 </div>
-            </div>
+            </a>
             <nav>
                 <ul>
                     <li><a href="#ve-chung-toi">Tầm Nhìn</a></li>
-                    <li><a href="#jumping">Giải Pháp Vận Động</a></li>
-                    <li><a href="#dinh-duong">Khoa Học Dinh Dưỡng</a></li>
-                    <li><a href="#nhan-ban">Hợp Tác Mô Hình</a></li>
-                    <li><a href="#lien-he">Liên Hệ</a></li>
+                    <li><a href="#jumping">Jumping</a></li>
+                    <li><a href="#dinh-duong">Dinh Dưỡng</a></li>
+                    <li><a href="#dao-tao">Đào Tạo</a></li>
+                    <li><a href="tel:0986106028" style="color: var(--primary); font-weight: 700;"><i class="fa-solid fa-phone" style="font-size: 0.75rem; margin-right: 2px;"></i> Liên Hệ</a></li>
                 </ul>
             </nav>
-            <a href="#lien-he" class="btn-header">Gia Nhập Ngay</a>
+            <a href="https://www.facebook.com/profile.php?id=61591504585804" target="_blank" class="btn-header">Gia Nhập Ngay</a>
         </div>
     </header>
 
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
-            <div class="slogan">Sống Khoẻ <span>•</span> Sống Trẻ <span>•</span> Sống Chất</div>
+            <div class="slogan">Sống Khoẻ • Sống Trẻ • Sống Chất</div>
             <h1>YOUNG VITALITY <br><span>AN BÌNH</span></h1>
-            <p>Hệ thống trung tâm huấn luyện vận động và tối ưu hóa sức khỏe chủ động cao cấp tại Bắc Ninh. Nơi thiết lập phong cách sống thế hệ mới: Kết hợp tập luyện khoa học và nền tảng dinh dưỡng chuẩn y khoa.</p>
-            <a href="#jumping" class="btn-primary">Trải Nghiệm Ngay</a>
+            <p>Hệ thống phòng tập thông minh huấn luyện vận động và tối ưu hóa sức khỏe chủ động cao cấp tại Bắc Ninh. Nơi thiết lập phong cách sống thế hệ mới, phù hợp với mọi lứa tuổi.</p>
+            <a href="https://www.facebook.com/profile.php?id=61591504585804" target="_blank" class="btn-primary">Trải Nghiệm Ngay</a>
         </div>
-        <!-- HÌNH ẢNH 1: NHẢY JUMPING ĐỒNG ĐỘI NGOÀI TRỜI SÔI ĐỘNG -->
         <div class="hero-image-wrap">
-            <img src="IMG_20260627_162512.jpg" alt="Hội viên tham gia lớp nhảy bạt nhún thể thao chuyên nghiệp nhóm đông người sôi động ngoài trời tại Bắc Ninh" class="hero-img-bg">
+            <img src="IMG_20260627_162512.jpg" alt="Lớp nhảy bạt nhún thể thao tại Bắc Ninh" class="hero-img-bg">
         </div>
     </section>
 
@@ -570,8 +613,8 @@
             </div>
             <div class="card">
                 <div class="card-icon"><i class="fa-solid fa-earth-asia"></i></div>
-                <h3>Lan Tỏa Giáo Dục Chủ Động</h3>
-                <p>Cung cấp và cập nhật các chuyên đề kiến thức ăn uống khoa học độc quyền. Giúp hội viên tự làm chủ sức khỏe bản thân và chăm sóc gia đình bền vững.</p>
+                <h3>Cân Quét & Phân Tích Chỉ Số</h3>
+                <p>Hội viên được cân quét cấu trúc cơ thể và phân tích chuyên sâu các chỉ số, kết hợp chia sẻ 21 chủ đề dinh dưỡng độc quyền để chủ động chăm sóc bản thân và gia đình.</p>
             </div>
         </div>
     </section>
@@ -583,16 +626,15 @@
                 <span class="section-tag" style="text-align: left;">Cơ Chế Khoa Học</span>
                 <h3>Lợi Ích Từ Công Nghệ Bạt Nhún Jumping</h3>
                 <p>Jumping không chỉ là vận động giải phóng năng lượng cao, bộ môn được chứng minh lâm sàng có khả năng bảo vệ hệ xương khớp tối đa nhờ cấu trúc giảm chấn đặc biệt từ thảm nhún chuyên dụng.</p>
-                <p>Mỗi giờ tập luyện cam kết mang lại hiệu quả đốt cháy năng lượng vượt trội, thúc đẩy trao đổi chất mạnh mẽ, hỗ trợ hệ thống tuần hoàn bạch huyết đào thải độc tố tự nhiên, giúp tinh thần luôn sảng khoái và tràn đầy sức sống trẻ.</p>
+                <p>Mỗi giờ tập luyện cam kết mang lại hiệu quả đốt cháy năng lượng vượt trội, thúc đẩy trao đổi chất mạnh mẽ, hỗ trợ hệ thống tuần hoàn bạch huyết đào thải độc tố tự nhiên.</p>
                 
-                <div style="margin-top: 30px; background: rgba(255,255,255,0.02); padding: 24px; border-radius: 8px; border-left: 3px solid var(--primary);">
-                    <h4 style="font-size: 1.1rem; margin-bottom: 8px; color: #fff;">Chỉ Số Đạt Được / Giờ Tập</h4>
-                    <p style="font-size: 2rem; font-weight: 800; color: var(--primary);">600 - 1000 Kcal <span style="font-size: 1rem; font-weight: 500; color: var(--text-muted);">Tiêu Hao</span></p>
+                <div style="margin-top: 24px; background: rgba(255,255,255,0.02); padding: 20px; border-radius: 8px; border-left: 4px solid var(--primary);">
+                    <h4 style="font-size: 1rem; margin-bottom: 6px; color: #fff;">Chỉ Số Đạt Được / Giờ Tập</h4>
+                    <p style="font-size: 1.8rem; font-weight: 800; color: var(--primary);">600 - 1000 Kcal <span style="font-size: 0.9rem; font-weight: 500; color: var(--text-muted);">Tiêu Hao</span></p>
                 </div>
             </div>
-            <!-- HÌNH ẢNH 2: HUẤN LUYỆN VIÊN TRÊN BẠT NHÚN TẠI TRUNG TÂM -->
             <div class="jumping-media-box">
-                <img src="IMG_20260627_162452.jpg" alt="Huấn luyện viên chuyên nghiệp đứng lớp thực hiện bài tập nhảy bạt nhún Jumping Cardio tiêu hao calo lớn tại trung tâm" class="jumping-inline-img">
+                <img src="IMG_20260627_162452.jpg" alt="Huấn luyện viên nhảy bạt nhún" class="jumping-inline-img">
             </div>
         </div>
     </section>
@@ -602,13 +644,7 @@
         <span class="section-tag">Dinh Dưỡng Cao Cấp</span>
         <h2 class="section-title">Ăn Uống Khoa Học Đổi Thay Vóc Dáng</h2>
         <div style="max-width: 850px; margin: 0 auto; text-align: center;">
-            <p style="font-size: 1.15rem; color: var(--text-muted); margin-bottom: 40px;">
-                Tại YOUNG VITALITY AN BÌNH, chúng tôi đề cao nguyên lý sức khỏe đến từ 80% chế độ dinh dưỡng kết hợp cùng 20% vận động. Hội viên được tiếp cận các kiến thức cốt lõi về kiểm soát năng lượng nạp vào, thấu hiểu cấu trúc cơ thể nhằm xây dựng lối sống lành mạnh, khoa học bền vững cho bản thân và cộng đồng xung quanh.
+            <p style="font-size: 1.05rem; color: var(--text-muted); margin-bottom: 30px;">
+                Tại YOUNG VITALITY AN BÌNH, chúng tôi đề cao nguyên lý sức khỏe đến từ 80% chế độ dinh dưỡng kết hợp cùng 20% vận động. Hội viên được tiếp cận các kiến thức cốt lõi về kiểm soát năng lượng nạp vào và thấu hiểu sâu sắc cấu trúc cơ thể.
             </p>
-            <div class="grid-3" style="text-align: left; margin-top: 60px;">
-                <div class="card" style="padding: 32px;">
-                    <h4 style="color: var(--primary); margin-bottom: 12px; font-weight: 700;">Giải Pháp Bữa Sáng Sạch</h4>
-                    <p>Ứng dụng nguồn dinh dưỡng lành mạnh, giàu hoạt chất sinh học tự nhiên, cung cấp đầy đủ vi chất tinh khiết thiết yếu cho cơ thể.</p>
-                </div>
-                <div class="card" style="padding: 32px;">
-                    <h4 style="color:
+            <div class
