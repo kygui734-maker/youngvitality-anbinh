@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YOUNG VITALITY AN BÌNH - Jumping & Dinh Dưỡng Khoa Học</title>
+    <!-- Google Fonts Premium -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #72f10d;
+            --primary-glow: rgba(114, 241, 13, 0.3);
+            --bg-main: #0b0c10;
+            --bg-surface: #1f2833;
+            --bg-card: #12171f;
+            --text-main: #ffffff;
+            --text-muted: #95a5a6;
+            --transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--bg-main);
+            color: var(--text-main);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        /* Premium Header Navigation */
+        header {
+            background-color: rgba(11, 12, 16, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .nav-container {
+            max-width: 1300px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 18px 24px;
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .logo-img {
+            width: 55px;
+            height: 55px;
+            object-fit: contain;
+            filter: drop-shadow(0 0 10px var(--primary-glow));
+            transition: var(--transition);
+        }
+
+        .logo-area:hover .logo-img {
+            transform: scale(1.05) rotate(5deg);
+        }
+
+        .brand-name {
+            font-weight: 800;
+            font-size: 1.3rem;
+            letter-spacing: 1.5px;
+            line-height: 1.2;
+        }
+
+        .brand-name span {
+            color: var(--primary);
+            display: block;
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 2px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 32px;
+        }
+
+        nav ul a {
+            color: var(--text-main);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.9rem;
+            transition: var(--transition);
+            letter-spacing: 0.5px;
+            opacity: 0.85;
+        }
+
+        nav ul a:hover {
+            color: var(--primary);
+            opacity: 1;
+        }
+
+        .btn-header {
+            background: transparent;
+            color: var(--primary);
+            border: 2px solid var(--primary);
+            padding: 10px 24px;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .btn-header:hover {
+            background: var(--primary);
+            color: #000;
+            box-shadow: 0 0 20px var(--primary-glow);
+        }
+
+        /* Hero Modern Section */
+        .hero {
+            padding: 200px 24px 140px 24px;
+            background: radial-gradient(circle at 80% 20%, rgba(114, 241, 13, 0.08) 0%, transparent 50%),
+                        radial-gradient(circle at 10% 80%, rgba(31, 40, 51, 0.5) 0%, transparent 50%);
+            text-align: center;
+            position: relative;
+        }
+
+        .hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            font-weight: 800;
+            margin-bottom: 24px;
+            letter-spacing: -1px;
+            line-height: 1.15;
+        }
+
+        .hero h1 span {
+            color: var(--primary);
+            position: relative;
+            display: inline-block;
+        }
+
+        .slogan {
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            letter-spacing: 6px;
+            color: var(--text-muted);
+            margin-bottom: 32px;
+            font-weight: 600;
+        }
+
+        .hero p {
+            max-width: 750px;
+            margin: 0 auto 48px auto;
+            font-size: 1.15rem;
+            color: var(--text-muted);
+            font-weight: 400;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: #000;
+            padding: 16px 40px;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 1rem;
+            text-decoration: none;
+            box-shadow: 0 8px 24px rgba(114, 241, 13, 0.25);
+            transition: var(--transition);
+            display: inline-block;
+            margin-bottom: 50px;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 32px var(--primary-glow);
+        }
+
+        /* Hero Image Layout */
+        .hero-image-wrap {
+            max-width: 1000px;
+            margin: 0 auto;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 25px 60px rgba(0,0,0,0.5), 0 0 40px rgba(114, 241, 13, 0.1);
+            border: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .hero-img-bg {
+            width: 100%;
+            height: auto;
+            max-height: 650px;
+            object-fit: cover;
+            display: block;
+            transition: var(--transition);
+        }
+
+        .hero-image-wrap:hover .hero-img-bg {
+            transform: scale(1.02);
+        }
+
+        /* Section Global Layout */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 100px 24px;
+        }
+
+        .section-tag {
+            color: var(--primary);
+            text-transform: uppercase;
+            font-weight: 700;
+            font-size: 0.85rem;
+            letter-spacing: 3px;
+            text-align: center;
+            display: block;
+            margin-bottom: 12px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 60px;
+            letter-spacing: -0.5px;
+        }
+
+        /* Grid Luxury Styling */
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 32px;
+        }
+
+        .card {
+            background-color: var(--bg-card);
+            border: 1px solid rgba(255, 255, 255, 0.03);
+            border-radius: 16px;
+            padding: 48px 32px;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            border-color: rgba(114, 241, 13, 0.2);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .card-icon {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 28px;
+        }
+
+        .card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 16px;
+            font-weight: 700;
+        }
+
+        .card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        /* Professional Content Block */
+        .content-split {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .content-text h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .content-text p {
+            color: var(--text-muted);
+            margin-bottom: 20px;
+            font-size: 1.05rem;
+        }
+
+        /* Jumping Image Display */
+        .jumping-media-box {
+            position: relative;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+            border: 1px solid rgba(114, 241, 13, 0.15);
+        }
+
+        .jumping-inline-img {
+            width: 100%;
+            height: auto;
+            min-height: 450px;
+            max-height: 550px;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* Info Section (Schedule & Location) */
+        .info-section {
+            background-color: var(--bg-card);
+            border-top: 1px solid rgba(255, 255, 255, 0.02);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.02);
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 48px;
+        }
+
+        .info-block {
+            display: flex;
+            gap: 24px;
+        }
+
+        .info-icon {
+            font-size: 1.8rem;
+            color: var(--primary);
+            margin-top: 4px;
+        }
+
+        .info-text h3 {
+            font-size: 1.25rem;
+            margin-bottom: 12px;
+            font-weight: 700;
+        }
+
+        .info-text p {
+            color: var(--text-muted);
+            font-size: 1rem;
+        }
+
+        /* Coaches Section */
+        .coaches {
+            display: flex;
+            gap: 32px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .coach-card {
+            background-color: var(--bg-main);
+            border: 1px solid rgba(255, 255, 255, 0.03);
+            border-radius: 12px;
+            padding: 40px;
+            text-align: center;
+            flex: 1;
+            min-width: 280px;
+            max-width: 380px;
+            transition: var(--transition);
+        }
+
+        .coach-card:hover {
+            border-color: rgba(114, 241, 13, 0.15);
+        }
+
+        .coach-avatar {
+            width: 80px;
+            height: 80px;
+            background-color: rgba(114, 241, 13, 0.05);
+            border-radius: 50%;
+            margin: 0 auto 24px auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid rgba(114, 241, 13, 0.3);
+            font-size: 2rem;
+            color: var(--primary);
+        }
+
+        .coach-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 6px;
+            font-weight: 700;
+        }
+
+        .coach-card p {
+            color: var(--primary);
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 24px;
+        }
+
+        .btn-phone {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background-color: rgba(255, 255, 255, 0.02);
+            color: var(--text-main);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            padding: 10px 24px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: var(--transition);
+        }
+
+        .btn-phone:hover {
+            background-color: var(--primary);
+            color: #000;
+            border-color: var(--primary);
+            box-shadow: 0 4px 12px var(--primary-glow);
+        }
+
+        /* Social Modern CTA Section */
+        .social-cta {
+            text-align: center;
+            padding: 120px 24px;
+            background: linear-gradient(180deg, var(--bg-main) 0%, #060709 100%);
+            border-top: 1px solid rgba(255, 255, 255, 0.02);
+        }
+
+        .btn-facebook {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            background-color: #ffffff;
+            color: #000000;
+            padding: 16px 40px;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 700;
+            text-decoration: none;
+            transition: var(--transition);
+            margin-top: 32px;
+        }
+
+        .btn-facebook:hover {
+            transform: translateY(-3px);
+            background-color: var(--primary);
+            box-shadow: 0 10px 24px var(--primary-glow);
+        }
+
+        /* Highlight Sub-text */
+        .sub-network-text {
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+            display: block;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Footer minimal */
+        footer {
+            background-color: #060709;
+            padding: 40px 24px;
+            text-align: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.02);
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+
+        footer p {
+            margin-bottom: 8px;
+        }
+
+        /* Responsive */
+        @media (max-width: 992px) {
+            .content-split {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+        }
+        @media (max-width: 768px) {
+            .nav-container {
+                flex-direction: column;
+                gap: 20px;
+            }
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 20px;
+            }
+            .hero h1 {
+                font-size: 2.8rem;
+            }
+            .container {
+                padding: 60px 24px;
+            }
+            .section-title {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header>
+        <div class="nav-container">
+            <div class="logo-area">
+                <img src="logo.png" alt="Logo Young Vitality An Bình" class="logo-img">
+                <div class="brand-name">
+                    YOUNG VITALITY
+                    <span>AN BÌNH</span>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#ve-chung-toi">Tầm Nhìn</a></li>
+                    <li><a href="#jumping">Giải Pháp Vận Động</a></li>
+                    <li><a href="#dinh-duong">Khoa Học Dinh Dưỡng</a></li>
+                    <li><a href="#nhan-ban">Hợp Tác Mô Hình</a></li>
+                    <li><a href="#lien-he">Liên Hệ</a></li>
+                </ul>
+            </nav>
+            <a href="#lien-he" class="btn-header">Gia Nhập Ngay</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="slogan">Sống Khoẻ <span>•</span> Sống Trẻ <span>•</span> Sống Chất</div>
+            <h1>YOUNG VITALITY <br><span>AN BÌNH</span></h1>
+            <p>Hệ thống trung tâm huấn luyện vận động và tối ưu hóa sức khỏe chủ động cao cấp tại Bắc Ninh. Nơi thiết lập phong cách sống thế hệ mới: Kết hợp tập luyện khoa học và nền tảng dinh dưỡng chuẩn y khoa.</p>
+            <a href="#jumping" class="btn-primary">Trải Nghiệm Ngay</a>
+        </div>
+        <!-- HÌNH ẢNH 1: NHẢY JUMPING ĐỒNG ĐỘI NGOÀI TRỜI SÔI ĐỘNG -->
+        <div class="hero-image-wrap">
+            <img src="IMG_20260627_162512.jpg" alt="Hội viên tham gia lớp nhảy bạt nhún thể thao chuyên nghiệp nhóm đông người sôi động ngoài trời tại Bắc Ninh" class="hero-img-bg">
+        </div>
+    </section>
+
+    <!-- Core Philosophy -->
+    <section class="container" id="ve-chung-toi">
+        <span class="section-tag">Triết Lý Vận Hành</span>
+        <h2 class="section-title">Nền Tảng Sức Khỏe Toàn Diện</h2>
+        <div class="grid-3">
+            <div class="card">
+                <div class="card-icon"><i class="fa-solid fa-bolt-lightning"></i></div>
+                <h3>Giải Pháp Khởi Động Calo</h3>
+                <p>Ứng dụng bộ môn Jumping thế hệ mới giúp tối ưu hóa hệ tim mạch, kích hoạt cơ xương khớp vững chắc mà không tạo áp lực tiêu cực lên cơ thể.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon"><i class="fa-solid fa-seedling"></i></div>
+                <h3>Cân Bằng Dinh Dưỡng</h3>
+                <p>Thiết lập chế độ dinh dưỡng lành mạnh giúp tái cấu trúc cơ thể, bù đắp năng lượng sạch thiết yếu cho hội viên sau các ca tập chuyên sâu.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon"><i class="fa-solid fa-earth-asia"></i></div>
+                <h3>Lan Tỏa Giáo Dục Chủ Động</h3>
+                <p>Cung cấp và cập nhật các chuyên đề kiến thức ăn uống khoa học độc quyền. Giúp hội viên tự làm chủ sức khỏe bản thân và chăm sóc gia đình bền vững.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Jumping Pro Section -->
+    <section class="info-section" id="jumping">
+        <div class="container content-split">
+            <div class="content-text">
+                <span class="section-tag" style="text-align: left;">Cơ Chế Khoa Học</span>
+                <h3>Lợi Ích Từ Công Nghệ Bạt Nhún Jumping</h3>
+                <p>Jumping không chỉ là vận động giải phóng năng lượng cao, bộ môn được chứng minh lâm sàng có khả năng bảo vệ hệ xương khớp tối đa nhờ cấu trúc giảm chấn đặc biệt từ thảm nhún chuyên dụng.</p>
+                <p>Mỗi giờ tập luyện cam kết mang lại hiệu quả đốt cháy năng lượng vượt trội, thúc đẩy trao đổi chất mạnh mẽ, hỗ trợ hệ thống tuần hoàn bạch huyết đào thải độc tố tự nhiên, giúp tinh thần luôn sảng khoái và tràn đầy sức sống trẻ.</p>
+                
+                <div style="margin-top: 30px; background: rgba(255,255,255,0.02); padding: 24px; border-radius: 8px; border-left: 3px solid var(--primary);">
+                    <h4 style="font-size: 1.1rem; margin-bottom: 8px; color: #fff;">Chỉ Số Đạt Được / Giờ Tập</h4>
+                    <p style="font-size: 2rem; font-weight: 800; color: var(--primary);">600 - 1000 Kcal <span style="font-size: 1rem; font-weight: 500; color: var(--text-muted);">Tiêu Hao</span></p>
+                </div>
+            </div>
+            <!-- HÌNH ẢNH 2: HUẤN LUYỆN VIÊN TRÊN BẠT NHÚN TẠI TRUNG TÂM -->
+            <div class="jumping-media-box">
+                <img src="IMG_20260627_162452.jpg" alt="Huấn luyện viên chuyên nghiệp đứng lớp thực hiện bài tập nhảy bạt nhún Jumping Cardio tiêu hao calo lớn tại trung tâm" class="jumping-inline-img">
+            </div>
+        </div>
+    </section>
+
+    <!-- Nutrition Clean Section -->
+    <section class="container" id="dinh-duong">
+        <span class="section-tag">Dinh Dưỡng Cao Cấp</span>
+        <h2 class="section-title">Ăn Uống Khoa Học Đổi Thay Vóc Dáng</h2>
+        <div style="max-width: 850px; margin: 0 auto; text-align: center;">
+            <p style="font-size: 1.15rem; color: var(--text-muted); margin-bottom: 40px;">
+                Tại YOUNG VITALITY AN BÌNH, chúng tôi đề cao nguyên lý sức khỏe đến từ 80% chế độ dinh dưỡng kết hợp cùng 20% vận động. Hội viên được tiếp cận các kiến thức cốt lõi về kiểm soát năng lượng nạp vào, thấu hiểu cấu trúc cơ thể nhằm xây dựng lối sống lành mạnh, khoa học bền vững cho bản thân và cộng đồng xung quanh.
+            </p>
+            <div class="grid-3" style="text-align: left; margin-top: 60px;">
+                <div class="card" style="padding: 32px;">
+                    <h4 style="color: var(--primary); margin-bottom: 12px; font-weight: 700;">Giải Pháp Bữa Sáng Sạch</h4>
+                    <p>Ứng dụng nguồn dinh dưỡng lành mạnh, giàu hoạt chất sinh học tự nhiên, cung cấp đầy đủ vi chất tinh khiết thiết yếu cho cơ thể.</p>
+                </div>
+                <div class="card" style="padding: 32px;">
+                    <h4 style="color:
