@@ -194,7 +194,7 @@
             border: 1px solid rgba(255,255,255,0.05);
         }
 
-        .hero-img-bg {
+        .hero-image-wrap img {
             width: 100%;
             height: auto;
             max-height: 550px;
@@ -228,7 +228,7 @@
             text-align: center;
             font-size: 2.4rem;
             font-weight: 800;
-            margin-bottom: 56px;
+            margin-bottom: 40px;
             letter-spacing: -0.5px;
         }
 
@@ -290,20 +290,24 @@
             margin-bottom: 20px;
         }
 
+        /* ĐỊNH DẠNG KHỐI GẠCH ĐẦU DÒNG ĐÀO TẠO */
         .custom-list {
             list-style: none;
-            margin-top: 24px;
+            margin: 20px auto 30px auto;
             background: rgba(255, 255, 255, 0.02);
-            padding: 20px;
-            border-radius: 10px;
-            border: 1px solid rgba(255, 255, 255, 0.05);
+            padding: 24px 40px;
+            border-radius: 12px;
+            border: 1px solid rgba(114, 241, 13, 0.2);
+            max-width: 500px;
+            text-align: left;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
         }
 
         .custom-list li {
             position: relative;
-            padding-left: 32px;
-            margin-bottom: 16px;
-            font-size: 1.1rem;
+            padding-left: 30px;
+            margin-bottom: 14px;
+            font-size: 1.25rem;
             font-weight: 700;
             color: #ffffff;
         }
@@ -367,11 +371,11 @@
             font-size: 1.25rem;
             margin-bottom: 10px;
             font-weight: 700;
-            color: #ffffff !important;
+            color: #ffffff;
         }
 
         .info-text p {
-            color: #ffffff !important;
+            color: #ffffff;
             font-size: 1rem;
             font-weight: 500;
         }
@@ -415,11 +419,11 @@
             font-size: 1.4rem;
             margin-bottom: 8px;
             font-weight: 800;
-            color: #ffffff !important;
+            color: #ffffff;
         }
 
         .coach-card p {
-            color: var(--primary) !important;
+            color: var(--primary);
             font-size: 0.9rem;
             font-weight: 700;
             text-transform: uppercase;
@@ -432,7 +436,7 @@
             align-items: center;
             gap: 10px;
             background-color: var(--primary);
-            color: #000000 !important;
+            color: #000000;
             padding: 14px 28px;
             border-radius: 8px;
             text-decoration: none;
@@ -534,7 +538,7 @@
 
             .section-title {
                 font-size: 1.8rem;
-                margin-bottom: 36px;
+                margin-bottom: 30px;
             }
 
             .content-split {
@@ -592,7 +596,7 @@
             <a href="https://www.facebook.com/profile.php?id=61591504585804" target="_blank" class="btn-primary">Trải Nghiệm Ngay</a>
         </div>
         <div class="hero-image-wrap">
-            <img src="IMG_20260627_162512.jpg" alt="Lớp nhảy bạt nhún thể thao tại Bắc Ninh" class="hero-img-bg">
+            <img src="IMG_20260627_162512.jpg" alt="Lớp nhảy bạt nhún thể thao tại Bắc Ninh">
         </div>
     </section>
 
@@ -647,4 +651,124 @@
             <p style="font-size: 1.05rem; color: var(--text-muted); margin-bottom: 30px;">
                 Tại YOUNG VITALITY AN BÌNH, chúng tôi đề cao nguyên lý sức khỏe đến từ 80% chế độ dinh dưỡng kết hợp cùng 20% vận động. Hội viên được tiếp cận các kiến thức cốt lõi về kiểm soát năng lượng nạp vào và thấu hiểu sâu sắc cấu trúc cơ thể.
             </p>
-            <div class
+            <div class="grid-3" style="text-align: left; margin-top: 40px;">
+                <div class="card">
+                    <h4 style="color: var(--primary); margin-bottom: 12px; font-weight: 700;">Giải Pháp Bữa Sáng Sạch</h4>
+                    <p>Ứng dụng nguồn dinh dưỡng lành mạnh, giàu hoạt chất sinh học tự nhiên, cung cấp đầy đủ vi chất tinh khiết thiết yếu cho cơ thể.</p>
+                </div>
+                <div class="card">
+                    <h4 style="color: var(--primary); margin-bottom: 12px; font-weight: 700;">Bữa Phụ Khoa Học</h4>
+                    <p>Cơ chế bổ sung năng lượng sạch đúng thời điểm, đảm bảo chuyển hóa ổn định mà không gây tích lũy mỡ thừa dư thừa.</p>
+                </div>
+                <div class="card">
+                    <h4 style="color: var(--primary); margin-bottom: 12px; font-weight: 700;">Lớp Học Kiến Thức</h4>
+                    <p>Chuỗi chuyên đề hướng dẫn thực hành cân bằng các nhóm đại chất, hỗ trợ chủ động lựa chọn thực phẩm thông minh hàng ngày.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ĐÀO TẠO & NHÂN BẢN PHÒNG TẬP (Mục tiêu của nút Đào Tạo) -->
+    <section class="info-section" id="dao-tao">
+        <div class="container" style="text-align: center;">
+            <span class="section-tag">Bền Vững & Phát Triển</span>
+            <h2 class="section-title" style="margin-bottom: 10px;">Nhân Bản Hệ Thống Phòng Tập Nhanh Chóng</h2>
+            
+            <!-- Khối gạch đầu dòng chuẩn chỉnh theo yêu cầu -->
+            <ul class="custom-list">
+                <li><i class="fa-solid fa-circle-check"></i> Đào tạo miễn phí</li>
+                <li><i class="fa-solid fa-circle-check"></i> HLV đồng hành trọn đời</li>
+            </ul>
+
+            <div style="margin: 20px auto 50px auto;">
+                <span class="sub-network-text"><i class="fa-solid fa-circle-check"></i> Hệ thống sở hữu gần 600 phòng tập trên toàn quốc</span>
+            </div>
+            
+            <div class="content-split" style="margin-bottom: 48px; text-align: left;">
+                <div class="jumping-media-box">
+                    <img src="IMG_20260627_162456.jpg" alt="Ban huấn luyện nhận chứng nhận" class="jumping-inline-img">
+                </div>
+                <div class="content-text">
+                    <h4 style="color: var(--primary); font-size: 1.3rem; margin-bottom: 14px; font-weight: 700;">Học Viện Đào Tạo & Chuyển Giao Tiêu Chuẩn Quốc Gia</h4>
+                    <p>Chất lượng chuyên môn chính là giá trị cốt lõi làm nên sự uy tín của YOUNG VITALITY AN BÌNH. Toàn bộ ban huấn luyện và các chủ vận hành phòng tập đều được trải qua khóa đào tạo kỹ thuật nghiêm ngặt, đạt các chứng chỉ chuyên môn khắt khe nhất từ tổng hệ thống trước khi đứng lớp.</p>
+                    <p>Chúng tôi cam kết mang lại giải pháp vận hành tối ưu, giảm thiểu rủi ro tối đa và đảm bảo hiệu quả sinh lời bền vững cho mọi đối tác trên hành trình lan tỏa phong cách sống khỏe.</p>
+                </div>
+            </div>
+
+            <div class="grid-3" style="text-align: left;">
+                <div class="card">
+                    <div class="card-icon"><i class="fa-solid fa-cubes"></i></div>
+                    <h3>Vận Hành Tinh Gọn</h3>
+                    <p>Hệ thống tối giản mặt bằng, quản lý thông minh bằng công nghệ giúp đối tác tối ưu hóa chi phí đầu tư ban đầu và sinh lời bền vững.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                    <h3>Giáo Trình Bản Quyền</h3>
+                    <p>Hỗ trợ huấn luyện chuyên sâu từ kỹ thuật Jumping động lực học tiên tiến đến giáo trình khoa học dinh dưỡng ứng dụng lâm sàng.</p>
+                </div>
+                <div class="card">
+                    <div class="fa-solid fa-share-nodes card-icon"></div>
+                    <h3>Giá Trị Lan Tỏa</h3>
+                    <p>Xây dựng cộng đồng văn minh, thúc đẩy lối sống lành mạnh và nâng cao chất lượng sức khỏe thể chất cho xã hội.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Operational Details & Contacts -->
+    <section class="container" id="thong-tin-phong-tap">
+        <span class="section-tag">Hành Trình Trải Nghiệm</span>
+        <h2 class="section-title">Thời Gian Hoạt Động & Vị Trí</h2>
+        
+        <div class="info-grid" style="margin-bottom: 56px;">
+            <div class="info-block">
+                <div class="info-icon"><i class="fa-regular fa-clock"></i></div>
+                <div class="info-text">
+                    <h3>Khung Giờ Huấn Luyện</h3>
+                    <p>Mở cửa liên tục từ Thứ 2 đến Chủ Nhật</p>
+                    <p style="margin-top: 8px; color: var(--primary); font-weight: 700; line-height: 1.5;">
+                        Ca Sáng: 05:00 - 07:00 <br>
+                        Ca Chiều: 17:00 - 19:00
+                    </p>
+                </div>
+            </div>
+            
+            <div class="info-block">
+                <div class="info-icon"><i class="fa-solid fa-map-pin"></i></div>
+                <div class="info-text">
+                    <h3>Vị Trí Trung Tâm</h3>
+                    <p>Sức Sống Trẻ, Khu phố Chợ An Bình, Phường Mão Điền, Bắc Ninh.</p>
+                </div>
+            </div>
+        </div>
+
+        <h3 style="text-align: center; font-size: 1.3rem; margin-bottom: 28px; font-weight: 800; text-transform: uppercase; color: #ffffff; letter-spacing: 0.5px;">Ban Huấn Luyện Chuyên Môn Trưởng</h3>
+        
+        <div class="coaches">
+            <div class="coach-card">
+                <div class="coach-avatar"><i class="fa-solid fa-user-shield"></i></div>
+                <h3>Nguyễn Thị Sáu</h3>
+                <p>Huấn Luyện Viên Trưởng Hệ Thống</p>
+                <a href="tel:0986106028" class="btn-phone"><i class="fa-solid fa-phone"></i> Gọi Ngay: 0986.106.028</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Media Section -->
+    <section class="social-cta">
+        <span class="section-tag">Cộng Đồng Kết Nối</span>
+        <h2 style="font-size: 1.8rem; font-weight: 800; margin-top: 10px;">Kênh Truyền Thông Chính Thức</h2>
+        <p style="color: var(--text-muted); max-width: 600px; margin: 12px auto 0 auto; font-size: 1rem;">Theo dõi lịch hoạt động, hình ảnh sự kiện và các bài chia sẻ kiến thức sống khỏe hữu ích từ câu lạc bộ của chúng tôi.</p>
+        <a href="https://www.facebook.com/profile.php?id=61591504585804" target="_blank" class="btn-facebook">
+            <i class="fa-brands fa-facebook-f"></i> Truy Cập Fanpage Facebook
+        </a>
+    </section>
+
+    <!-- Footer minimal -->
+    <footer>
+        <p>&copy; 2026 YOUNG VITALITY AN BÌNH. Bảo lưu mọi quyền thương hiệu.</p>
+        <p style="font-size: 0.75rem; color: #34495e; margin-top: 6px;">Sống Khoẻ - Sống Trẻ - Sống Chất | Hệ thống phòng tập tối ưu theo tiêu chuẩn quốc tế</p>
+    </footer>
+
+</body>
+</html>
